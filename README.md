@@ -1,0 +1,9 @@
+En el siguiente informe desarrollamos una solucion integral para la adquisicion, procesamiento y visualizacion de señales. Su principal función es convertir una señal del dominio del tiempo al dominio de la frecuencia mediante la Transformada Rápida de Fourier (FFT), lo que permite un análisis espectral detallado de la señal capturada.Se creo la carpeta correspondiente en el escritorio para luego crear cada modulo con su respectivo codigo que permita tener el analizador, el graficador , el lector y los puertos.
+
+El sistema implementa el siguiente ciclo de vida para el análisis de una señal:Conexión: El módulo Puertos identifica el canal de comunicación serial (puerto COM) para establecer la conexión con la Raspberry Pi Pico.Muestreo: El código lector_Rasp utiliza el ADC de la Pico para tomar n muestras a una frecuencia de muestreo predefinida (muestrear_freq), asegurando una captura precisa de la señal analógica.Análisis (FFT): Los datos muestreados se transfieren al PC, donde el módulo transf_fft aplica el algoritmo recursivo de la FFT. Esto descompone la señal en sus componentes sinusoidales, calculando la magnitud y la fase de cada frecuencia.Reporte Gráfico: Finalmente, el módulo Graficador_FFT utiliza los resultados (magnitud y fase) para generar dos gráficos que permiten al usuario identificar visualmente las frecuencias dominantes y el comportamiento espectral de la señal de entrada.
+
+Realizando los procedimientos necesarios logramos visualizar las graficas correspondientes de magnitud y fase.Ademas el puerto que utilizamos fue el COM3.
+
+En conjunto, el sistema permite:
+
+Capturar una señal real , muestrearla correctamente , analizarla en frecuencia , visualizar sus características y gestionar la comunicación entre dispositivos.
