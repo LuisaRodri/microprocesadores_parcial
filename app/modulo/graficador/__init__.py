@@ -1,0 +1,1 @@
+from app.modulo.graficador import graficador
